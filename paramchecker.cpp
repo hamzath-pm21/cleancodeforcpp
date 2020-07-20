@@ -1,4 +1,13 @@
-
+static bool isbpmOk(float bpm);
+static bool isbpmOk(float bpm)
+{
+  bool return_value;
+  return_value = true;
+  if(bpm < 70 || bpm > 150) {
+    return_value = false;
+  }
+  return (return_value);
+}
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 
   if(bpm < 70 || bpm > 150) {
