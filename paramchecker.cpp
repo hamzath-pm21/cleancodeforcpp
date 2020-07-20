@@ -10,7 +10,7 @@ static bool isbpmOk(float bpm)
 }
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 
-  if(bpm < 70 || bpm > 150) {
+  if(isbpmOk(bpm) != true) {
     return false;
   } else if(spo2 < 80) {
     return false;
