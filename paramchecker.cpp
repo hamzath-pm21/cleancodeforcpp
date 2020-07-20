@@ -12,7 +12,7 @@ static bool isbpmOk(float bpm)
 static bool isrespRateOk(float respRate) {
   bool return_value;
   return_value = true;
-  if (resprate < 30 || respRate > 60) {
+  if (respRate < 30 || respRate > 60) {
     return_value = false;
   }
   return (return_value);
