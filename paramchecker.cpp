@@ -1,31 +1,11 @@
-static int isbpmOk(float bpm);
-static int isbpmOk(float bpm)
+static int isparamOk(float bpm, float lower, float upper);
+static int isparamOk(float param, float lower, float upper)
 {
-  int return_value;
-  return_value = 1;
-  if(bpm < 70 || bpm > 150) {
+  int return_value = 1;
+  if ( param < lower || param > upper) {
     return_value = 0;
   }
   return (return_value);
-}
-
-static int isrespRateOk(float respRate) {
-  int return_value;
-  return_value = 1;
-  if (respRate < 30 || respRate > 60) {
-    return_value = 0;
-  }
-  return (return_value);
-}
-
-static int isspo2Ok(float spo2)
-{
-  int return_value;
-  return_value = 1;
-  if (spo2 < 80) {
-    return_value = 0;
-  }
-  return(return_value);
 }
   
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
@@ -33,11 +13,11 @@ bool vitalsAreOk(float bpm, float spo2, float respRate) {
   int respRateret;
   int spo2ret;
   bool retval = false;
-  bpmret = isbpmOk(bpm);
+  bpmret = isparamOk(bpm,70,150);
     
-  spo2ret = isspo2Ok(spo2); 
+  spo2ret = isparamOk(spo2,80,100); 
     
-  respRateret = isrespRateOk(respRate);
+  respRateret = isparamOk(respRate,30,60);
    
   if ((bpmret & respRateret & spo2ret) == 1) {
     retval =  true;
