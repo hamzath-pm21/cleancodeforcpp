@@ -39,12 +39,12 @@ int main(int argc, char **argv) {
 	dBVector1.push_back(&rp2);
 
 
-	Patientreport Pt(dBVector);
-	Patientreport Pt1(dBVector1);
+	Patientreport Pt;
+	Patientreport Pt1;
 
-	x = Pt.IsVitalsOk();
+	x = Pt.IsVitalsOk(dBVector);
 	assert(x != false);
-	x = Pt1.IsVitalsOk();
+	x = Pt1.IsVitalsOk(dBVector1);
 	assert(x != true);
 
 	return 0;
