@@ -45,11 +45,8 @@ public:
 };
 
 class Patientreport {
-	vector<health*> patientmedicalvalues;
 public:
-	explicit Patientreport(vector<health*> &currentvector)
-	{
-		patientmedicalvalues = currentvector;
-	}
-	bool IsVitalsOk();
+	bool IsVitalsOk(vector<health*> &patientmedicalvalues);
+	Patientreport() {}
 };
+
