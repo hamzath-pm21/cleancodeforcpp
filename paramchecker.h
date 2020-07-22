@@ -5,7 +5,11 @@ protected:
 	float upperbound;
 	float lowerbound;
 public:
-	health() { }
+	health() { 
+	value = 0;
+	upperbound = 0;
+	lowerbound = 0;
+	}
 	int isParamOk();
 };
 
