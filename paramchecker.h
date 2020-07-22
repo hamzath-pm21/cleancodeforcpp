@@ -1,3 +1,4 @@
+#define HEALTH_VITALS    (3)
 
 class health {
 protected:
@@ -43,12 +44,12 @@ public:
 };
 
 class Patientreport {
-	health *health_rep[3];
+	health *health_rep[HEALTH_VITALS];
 	int TotalReps;
 public:
 	explicit Patientreport(float *medval)
 	{
-		TotalReps = 3;
+		TotalReps = HEALTH_VITALS;
 		health_rep[0] = new bpm(medval[0]);
 		health_rep[1] = new spo2(medval[1]);
 		health_rep[2] = new RespRate(medval[2]);
