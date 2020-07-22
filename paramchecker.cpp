@@ -13,11 +13,11 @@ bool Patientreport::IsVitalsOk() {
 	int i;
 	int ret = 0;
 	bool retval = false;
-	for (i = 0; i < TotalReps; i++)
+	for (i = 0; i < patientmedicalvalues.size(); i++)
 	{
-		ret += health_rep[i]->isParamOk();
+		ret += patientmedicalvalues[i]->isParamOk();
 	}
-	if (ret == TotalReps) {
+	if (ret == patientmedicalvalues.size()) {
 		retval = true;
 	}
 	return retval;
