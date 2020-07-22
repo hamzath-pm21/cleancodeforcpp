@@ -1,4 +1,5 @@
-#define HEALTH_VITALS    (3)
+#include <vector>
+using namespace std;
 
 class health {
 protected:
@@ -44,15 +45,11 @@ public:
 };
 
 class Patientreport {
-	health *health_rep[HEALTH_VITALS];
-	int TotalReps;
+	vector<health*> patientmedicalvalues;
 public:
-	explicit Patientreport(float *medval)
+	explicit Patientreport(vector<health*> &currentvector)
 	{
-		TotalReps = HEALTH_VITALS;
-		health_rep[0] = new bpm(medval[0]);
-		health_rep[1] = new spo2(medval[1]);
-		health_rep[2] = new RespRate(medval[2]);
+		patientmedicalvalues = currentvector;
 	}
 	bool IsVitalsOk();
 };
