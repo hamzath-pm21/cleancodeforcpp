@@ -9,8 +9,8 @@ int health::isParamOk() {
 
 }
 
-bool Patientreport::IsVitalsOk() {
-	int i;
+bool Patientreport::IsVitalsOk(vector<health*> &patientmedicalvalues) {
+	size_t i;
 	int ret = 0;
 	bool retval = false;
 	for (i = 0; i < patientmedicalvalues.size(); i++)
@@ -22,4 +22,3 @@ bool Patientreport::IsVitalsOk() {
 	}
 	return retval;
 }
-
