@@ -9,7 +9,7 @@ int health::isParamOk() {
 
 }
 
-bool Patientreport::IsVitalsOk(vector<health*> &patientmedicalvalues) {
+bool IsVitalsOk(vector<health*> &patientmedicalvalues) {
 	size_t i;
 	int ret = 0;
 	bool retval = false;
