@@ -9,11 +9,11 @@ using namespace std;
 vector<health*> dBVector;
 vector<health*> dBVector1;
 TEST(VitalsTest, BPM) { 
-    ASSERT_EQ(true, Patientreport::IsVitalsOk(dBVector));
+    ASSERT_EQ(true, IsVitalsOk(dBVector));
 }
  
 TEST(VitalsTest, SPO2) {
-    ASSERT_EQ(false, Patientreport::IsVitalsOk(dBVector1));
+    ASSERT_EQ(false, IsVitalsOk(dBVector1));
 }
 
 
@@ -37,9 +37,6 @@ int main(int argc, char **argv) {
 	dBVector1.push_back(&sp2);
 	dBVector1.push_back(&rp2);
 
-
-	Patientreport Pt;
-	Patientreport Pt1;
 
         testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();
