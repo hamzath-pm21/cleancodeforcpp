@@ -6,22 +6,20 @@
 
 using namespace std;
  
-/*
+
 TEST(VitalsTest, BPM) { 
-    ASSERT_EQ(true, vitalsAreOk(100, 100, 50));
+    ASSERT_EQ(true, Pt.IsVitalsOk(dBVector));
 }
  
 TEST(VitalsTest, SPO2) {
-    ASSERT_EQ(false, vitalsAreOk(100, 40, 50));
+    ASSERT_EQ(false, Pt1.IsVitalsOk(dBVector1));
 }
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 
-*/
+
 
 
 int main(int argc, char **argv) {
-	bool x;
+
 	vector<health*> dBVector;
 	bpm b1(100);
 	spo2 sp(90);
@@ -42,10 +40,6 @@ int main(int argc, char **argv) {
 	Patientreport Pt;
 	Patientreport Pt1;
 
-	x = Pt.IsVitalsOk(dBVector);
-	assert(x != false);
-	x = Pt1.IsVitalsOk(dBVector1);
-	assert(x != true);
-
-	return 0;
+        testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
 }
