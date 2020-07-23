@@ -6,7 +6,8 @@
 
 using namespace std;
  
-
+vector<health*> dBVector;
+vector<health*> dBVector1;
 TEST(VitalsTest, BPM) { 
     ASSERT_EQ(true, Patientreport::IsVitalsOk(dBVector));
 }
@@ -20,7 +21,7 @@ TEST(VitalsTest, SPO2) {
 
 int main(int argc, char **argv) {
 
-	vector<health*> dBVector;
+	
 	bpm b1(100);
 	spo2 sp(90);
 	RespRate rp(50);
@@ -28,7 +29,7 @@ int main(int argc, char **argv) {
 	dBVector.push_back(&sp);
 	dBVector.push_back(&rp);
 
-	vector<health*> dBVector1;
+
 	bpm b2(200);
 	spo2 sp2(90);
 	RespRate rp2(50);
