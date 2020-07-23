@@ -44,9 +44,5 @@ public:
 
 };
 
-class Patientreport {
-public:
-	bool IsVitalsOk(vector<health*> &patientmedicalvalues);
-	Patientreport() {}
-};
+bool IsVitalsOk(vector<health*> &patientmedicalvalues);
 
