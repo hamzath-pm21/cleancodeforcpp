@@ -8,11 +8,11 @@ using namespace std;
  
 
 TEST(VitalsTest, BPM) { 
-    ASSERT_EQ(true, Pt.IsVitalsOk(dBVector));
+    ASSERT_EQ(true, Patientreport::IsVitalsOk(dBVector));
 }
  
 TEST(VitalsTest, SPO2) {
-    ASSERT_EQ(false, Pt1.IsVitalsOk(dBVector1));
+    ASSERT_EQ(false, Patientreport::IsVitalsOk(dBVector1));
 }
 
 
